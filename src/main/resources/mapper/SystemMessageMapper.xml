@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nsd.recruitment.dao.SystemMessageDao">
+
+    <resultMap id="MessageResultMap" type="com.nsd.recruitment.domain.ChatMessage">
+        <result column="id" jdbcType="BIGINT" property="messageId" />
+        <result column="message_content" jdbcType="VARCHAR" property="messageContent" />
+        <result column="message_type" jdbcType="TINYINT" property="messageType" />
+        <result column="job_id" jdbcType="BIGINT" property="jobId" />
+        <result column="unread" jdbcType="TINYINT" property="unread" />
+        <result column="company_id" jdbcType="BIGINT" property="companyId" />
+    </resultMap>
+
+    <resultMap id="ChatRecordResultMap" type="com.nsd.recruitment.vo.ChatRespVo">
+        <result column="message_type" jdbcType="TINYINT" property="messageType" />
+        <result column="job_id" jdbcType="BIGINT" property="jobId" />
+        <result column="sender_id" jdbcType="BIGINT" property="senderId" />
+        <result column="unread" jdbcType="TINYINT" property="unread" />
+        <result column="message_content" jdbcType="TINYINT" property="messageContent" />
+
+    </resultMap>
+
+    <resultMap id="ChatMessageResultMap" type="com.nsd.recruitment.vo.ChatVo">
+        <result column="chat_content" jdbcType="VARCHAR" property="content" />
+        <result column="receiver_id" jdbcType="BIGINT" property="target" />
+        <result column="sender_id" jdbcType="BIGINT" property="source" />
+    </resultMap>
+    
+    
+    
+
+    <insert id="addSystemMessage" parameterType="com.nsd.recruitment.domain.ChatMessage" useGeneratedKeys="true" keyProperty="messageId">
+        insert into system_message
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="messageContent != null and messageContent!=''">
+                message_content,
+            </if>
+            <if test="companyId != null ">
+                company_id,
+            </if>
+            <if test="applicantId != null ">
+                applicant_id,
+            </if>
+            <if test="unread != null ">
+                unread,
+            </if>
+            <if test="createTime != null ">
+                create_time,
+            </if>
+            <if test="updateTime != null ">
+                update_time,
+            </if>
+            <if test="flag != null">
+                flag,
+            </if>
+             <if test="jobId != null">
+                job_id,
+            </if>
+              <if test="messageType != null">
+                message_type,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="messageContent != null and messageContent!=''">
+                #{messageContent},
+            </if>
+            <if test="companyId != null ">
+                #{companyId},
+            </if>
+            <if test="applicantId != null ">
+                #{applicantId},
+            </if>
+            <if test="unread != null ">
+                #{unread},
+            </if>
+            <if test="createTime != null ">
+                #{createTime},
+            </if>
+            <if test="updateTime != null ">
+                #{updateTime},
+            </if>
+            <if test="flag != null">
+                #{flag},
+            </if>
+            <if test="jobId != null">
+                #{jobId},
+            </if>
+            <if test="messageType != null">
+                #{messageType},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="updateSystemMessageById" parameterType="com.nsd.recruitment.domain.ChatMessage">
+        update system_message
+        <set>
+            <if test="messageContent != null and messageContent!=''">
+                message_content =#{messageContent},
+            </if>
+        </set>
+        where receiver_id = #{receiverId} and sender_id=#{senderId} and job_id=#{jobId}
+    </update>
+    
+    <select id="listMessageByReceiver" parameterType="java.lang.Long" resultMap="MessageResultMap">
+        SELECT id, message_content,message_type,job_id,unread FROM nsd.system_message
+        where applicant_id=#{receiverId}
+        order by unread desc
+    </select>
+
+    <select id="showChatRecordByReceiver" parameterType="java.lang.Long" resultMap="ChatRecordResultMap">
+       SELECT sender_id, message_content,message_type,job_id,unread
+       FROM system_message
+        where receiver_id=#{receiverId}
+        and message_type=3
+        group by sender_id
+        order by unread desc
+    </select>
+
+    <select id="countUnreadMessageByApplicant" parameterType="java.lang.Long" resultType="java.lang.Integer">
+        select count(*) unread_number from system_message
+        where applicant_id=#{applicantId}
+        and unread=1
+        and message_type=1
+    </select>
+
+  <update id="changeMessageStatus" >
+      update system_message  set unread=#{status} where id=#{messageId}
+  </update>
+
+    <select id="findMessageByReceiverAndSender" resultType="java.lang.Long">
+         SELECT id FROM system_message
+        where company_id=#{companyId}
+        and applicant_id=#{applicantId}
+        and job_id=#{jobId}
+    </select>
+
+    <select id="listChatRecordByApplicant" parameterType="java.lang.Long"  resultMap="ChatMessageResultMap">
+        SELECT chat.chat_content,message.sender_id,message.receiver_id FROM chat_record chat
+        left join system_message message on chat.message_id=message.id
+        where
+        chat.record_status=0
+        and chat.message_id=#{messageId}
+    </select>
+
+    <select id="listChatMessageByApplicantId" parameterType="java.lang.Long" resultMap="MessageResultMap">
+        SELECT id, message_content,message_type,job_id,unread,company_id FROM system_message
+        where applicant_id=#{applicantId}
+
+    </select>
+
+     <select id="listChatMessageByCompanyId" parameterType="java.lang.Long" resultMap="MessageResultMap">
+        SELECT id, message_content,message_type,job_id,unread,company_id,applicant_id FROM system_message
+        where company_id=#{companyId}
+
+    </select>
+
+
+
+
+</mapper>

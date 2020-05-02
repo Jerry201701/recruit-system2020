@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nsd.recruitment.dao.JobInfoDao">
+    <resultMap id="BaseResultMap" type="com.nsd.recruitment.domain.JobInfo">
+        <result column="id" property="id" />
+        <result column="company_id" property="companyId" />
+        <result column="job_name" property="jobName" />
+        <result column="job_description" property="jobDescription" />
+        <result column="education_level" property="educationLevel" />
+        <result column="work_experience" property="workExperience" />
+        <result column="salary_range" property="salaryRange" />
+        <result column="certificates" property="certificates" />
+        <result column="update_time" property="updateTime" />
+        <result column="create_time" property="createTime" />
+        <result column="update_by" property="updateBy" />
+        <result column="create_by" property="createBy" />
+        <result column="address" property="address" />
+        <result column="latitude" property="latitude" />
+        <result column="longitude" property="longitude" />
+        <result column="flag" property="flag" />
+    </resultMap>
+
+     <resultMap id="PostResultMap" type="com.nsd.recruitment.dto.model.PostDetail">
+        <result column="id" property="id" />
+        <result column="company_id" property="companyId" />
+        <result column="job_name" property="jobName" />
+        <result column="job_description" property="jobDescription" />
+        <result column="education_level" property="educationLevel" />
+        <result column="salary_range" property="salaryRange" />
+        <result column="certificates" property="certificates" />
+        <result column="update_time" property="updateTime" />
+        <result column="create_time" property="createTime" />
+        <result column="address" property="address" />
+        <result column="latitude" property="latitude" />
+        <result column="longitude" property="longitude" />
+        <result column="full_name" property="companyName" />
+        <result column="brand" property="brand" />
+        <result column="min_staff" property="minStaff" />
+        <result column="max_Staff" property="maxStaff" />
+        <result column="company_desc" property="description" />
+        <result column="work_experience" property="workExperience" />
+        <result column="interview_result" property="deliveryStatus" />
+        <result column="company_logo" property="companyLogo" />
+    </resultMap>
+
+    <resultMap id="ChatResultMap" type="com.nsd.recruitment.vo.CompanyMessageVo">
+        <result column="id" property="jobId" />
+        <result column="company_id" property="companyId" />
+        <result column="job_name" property="jobName" />
+        <result column="job_description" property="jobDescription" />
+        <result column="education_level" property="educationLevel" />
+        <result column="work_experience" property="workExperience" />
+        <result column="salary_range" property="salaryRange" />
+        <result column="certificates" property="certificates" />
+        <result column="address" property="address" />
+        <result column="applicant_id" property="applicantId" />
+    </resultMap>
+
+    <resultMap id="CompanyPostJobResultMap" type="com.nsd.recruitment.vo.PostJobVo">
+        <result column="job_id" property="jobId" />
+        <result column="company_id" property="companyId" />
+        <result column="job_name" property="jobName" />
+        <result column="company_logo" property="companyLogo" />
+        <result column="brand" property="brand" />
+        <result column="create_time" property="createTime" />
+        <result column="min_salary" property="minSalary" />
+        <result column="max_salary" property="maxSalary" />
+        <result column="max_work_years" property="maxWorkYears" />
+        <result column="min_work_years" property="minWorkYears" />
+        <result column="address" property="address" />
+
+    </resultMap>
+    
+    <resultMap id="ConversationResultMap" type="com.nsd.recruitment.vo.SenderAndReceiverVo">
+        <result column="job_id" property="id" />
+        <result column="company_id" property="companyId" />
+        <result column="full_name" property="companyName" />
+        <result column="company_logo" property="companyLogo" />
+        <result column="job_name" property="jobName" />
+        <result column="job_description" property="jobDescription" />
+        <result column="education_level" property="educationLevel" />
+        <result column="work_experience" property="workExperience" />
+        <result column="salary_range" property="salaryRange" />
+        <result column="certificates" property="certificates" />
+        <result column="address" property="address" />
+        <result column="min_salary" property="minSalary" />
+        <result column="max_salary" property="maxSalary" />
+        <result column="min_work_years" property="minWorkYears" />
+        <result column="max_work_years" property="maxWorkYears" />
+
+    </resultMap>
+
+
+    <sql id="Base_Column_List">
+		id, company_id,job_name,job_description,education_level,update_time,create_time,address,latitude,longitude,
+		salary_range,certificate,update_by,create_by,flag
+	</sql>
+
+    <select id="getOneById" resultMap="BaseResultMap" parameterType="java.lang.Long">
+        select
+        <include refid="Base_Column_List" />
+        from job_info
+        where id = #{id}
+    </select>
+    <select id="findByPage" resultMap="BaseResultMap">
+        select <include refid="Base_Column_List"/> from job_info
+    </select>
+    <select id="getPostDetailByApplicant"  resultMap="PostResultMap">
+        select j.id, j.company_id,j.job_name,j.job_description,j.education_level,j.update_time,j.create_time,j.address,
+        j.latitude,j.longitude,j.salary_range,j.certificates,c.full_name,c.brand,c.company_desc,c.min_staff,c.max_staff,c.address,
+        j.work_experience,p.interview_result,c.company_logo
+        from job_info j
+		left join  company_info c on j.company_id=c.id
+		left join  (select p.job_id,p.interview_result from position_applicant p ,
+        (select a.id applicant_id from applicant a ,user_info u
+        where a.user_id=u.id
+        and u.openid=#{openid}) au where p.applicant_id=au.applicant_id) p on p.job_id=j.id
+		where j.id=#{id}
+    </select>
+    <select id="showPostDetailByCompanyId" parameterType="java.lang.Long" resultMap="PostResultMap">
+        select j.id, j.company_id,j.job_name,j.job_description,j.education_level,j.update_time,j.create_time,j.address,
+        j.latitude,j.longitude,j.salary_range,j.certificates,c.full_name,c.brand,c.company_desc,c.min_staff,c.max_staff,c.address,
+        j.work_experience,c.company_logo
+        from job_info j
+		left join  company_info c on j.company_id=c.id
+		where j.id=#{jobId}
+    </select>
+
+    <select id="showChatJobInfo" parameterType="java.lang.Long" resultMap="ChatResultMap">
+       select job.id, job.company_id,job.job_name,job.job_description,job.education_level,job.address,job.salary_range,
+       job.work_experience,job.certificates,delivery.applicant_id
+        from job_info job,position_applicant delivery
+        where job.id=delivery.job_id
+        and delivery.id=#{deliveryId}
+    </select>
+
+
+    <select id="findDeliveryJobByApplicant" parameterType="java.lang.Long" resultMap="CompanyPostJobResultMap" >
+        select job.id job_id,  job.job_name,job.min_salary,job.max_salary,job.min_work_years,job.max_work_years,job.address,
+        job.create_time ,company.brand,company.id company_id,company.company_logo
+        from (select job_id,company_id from  position_applicant where applicant_id=#{applicantId}) p
+        left  join  job_info job on p.job_id=job.id
+        left join  company_info company on company.id=p.company_id
+
+    </select>
+
+    <select id="listAllPostJobs" resultMap="CompanyPostJobResultMap">
+    select job.id job_id,  job.job_name,job.min_salary,job.max_salary,job.min_work_years,job.max_work_years,job.address,
+    job.create_time ,company.brand,company.id company_id,company.company_logo
+    from job_info job
+    left join company_info company on company.id=job.company_id
+    </select>
+    
+    <select id="findChatJob" resultMap="ConversationResultMap" parameterType="java.lang.Long">
+         select j.id, j.company_id,j.job_name,j.job_description,j.education_level,j.update_time,j.create_time,j.address,
+         j.salary_range,j.certificates,c.full_name,c.company_logo,j.min_salary,j.max_salary,j.min_work_years,j.max_work_years
+        from job_info j
+		left join  company_info c on j.company_id=c.id
+		where j.id=#{jobId}
+
+    </select>
+
+    <select id="findJobsByConditions" parameterType="com.nsd.recruitment.vo.JobQueryVo" resultMap="CompanyPostJobResultMap">
+    select job.id job_id,  job.job_name,job.min_salary,job.max_salary,job.min_work_years,job.max_work_years,job.address,
+    job.create_time ,company.brand,company.id company_id,company.company_logo
+    from job_info job
+    left join company_info company on company.id=job.company_id
+    <where>
+    1=1
+    <if test="categoryName !=null and categoryName !=''">
+        and job.job_name=#{categoryName}
+    </if>
+    <if test="regionName !=null and regionName !=''">
+        <bind name="regionName" value="'%' + regionName + '%'"/>
+        and job.address like CONCAT('%',#{regionName},'%')
+    </if>
+    <if test="minSalary !=null and minSalary !=0">
+        and job.min_salary &gt;= #{minSalary}
+
+    </if>
+    <if test="maxSalary !=null and maxSalary !=0">
+        and job.max_salary &gt;= #{maxSalary}
+
+    </if>
+
+    </where>
+    </select>
+
+
+
+</mapper>

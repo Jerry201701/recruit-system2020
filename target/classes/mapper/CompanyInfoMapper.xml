@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nsd.recruitment.dao.CompanyInfoDao">
+    <resultMap id="BaseResultMap" type="com.nsd.recruitment.domain.CompanyInfo">
+        <result column="id" property="id" />
+        <result column="fullName" property="full_name" />
+        <result column="employees_number" property="employeesNumber" />
+        <result column="shortName" property="short_name" />
+        <result column="brand" property="brand" />
+        <result column="updateTime" property="update_time" />
+        <result column="createTime" property="create_time" />
+        <result column="address" property="address" />
+        <result column="latitude" property="latitude" />
+        <result column="longitude" property="longitude" />
+        <result column="description" property="description" />
+        <result column="min_staff" property="minStaff" />
+        <result column="max_staff" property="maxStaff" />
+        <result column="flag" property="flag" />
+    </resultMap>
+
+    <resultMap id="CenterResultMap" type="com.nsd.recruitment.vo.CompanyCenterVo">
+        <result column="interview_number" jdbcType="INTEGER" javaType="INTEGER" property="interviewNumber" />
+        <result column="entry_number" jdbcType="INTEGER" javaType="INTEGER" property="entryNumber" />
+    </resultMap>
+
+    <resultMap id="CompanyAndManagerResultMap" type="com.nsd.recruitment.vo.CompanyAndManagerVo">
+        <result column="id" property="id" />
+        <result column="full_name" property="fullName" />
+        <result column="short_name" property="shortName" />
+        <result column="brand" property="brand" />
+        <result column="address" property="address" />
+        <result column="latitude" property="latitude" />
+        <result column="longitude" property="longitude" />
+        <result column="company_desc" property="description" />
+        <result column="min_staff" property="minStaff" />
+        <result column="max_staff" property="maxStaff" />
+        <result column="company_logo" property="companyLogo" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+		id, full_name,employees_number,short_name,brand,update_time,create_time,address,latitude,longitude,
+		company_desc,min_staff,max_staff,flag
+	</sql>
+
+    <select id="getOneById" resultMap="BaseResultMap" parameterType="java.lang.Long">
+        select
+        <include refid="Base_Column_List" />
+        from company_info
+        where id = #{id}
+    </select>
+    <select id="showCompanyDetail" resultMap="BaseResultMap" parameterType="java.lang.String">
+        select
+        <include refid="Base_Column_List" />
+        from company_info
+        where company_code = #{code}
+    </select>
+
+    <select id="findByPage" resultMap="BaseResultMap">
+        select <include refid="Base_Column_List"/> from company_info
+    </select>
+
+    <select id="findCompanyByKeyWord" parameterType="java.lang.String" resultMap="BaseResultMap">
+        select <include refid="Base_Column_List" /> from company_info
+        <where>
+        1=1
+            <if test="keyWord !=null and keyWord !=''">
+                <bind name="keyWord" value="'%' + keyWord + '%'"/>
+                and full_name like CONCAT('%',#{keyWord},'%')
+            </if>
+        </where>
+    </select>
+
+    <select id="findCenterNumber" resultMap="CenterResultMap" parameterType="java.lang.Long">
+        select sum(CASE interview_result WHEN 4 THEN 1 ELSE 0 END) entry_number,
+        sum(CASE interview_result WHEN 3 THEN 1 ELSE 0 END) interview_number
+        FROM position_applicant
+        where company_id=#{companyId}
+    </select>
+
+
+    <select id="companyDetailAndManager" parameterType="java.lang.Long" resultMap="CompanyAndManagerResultMap">
+       select  id,full_name,short_name,brand,address,latitude,longitude,company_desc,min_staff,max_staff,company_logo,flag
+        from company_info
+        where id =#{companyId}
+    </select>
+
+    <select id="findPage" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+       select  id,full_name,short_name,brand,address,latitude,longitude,company_desc,min_staff,max_staff,flag,create_time
+        from company_info
+    </select>
+
+    <select id="findUncheckPage" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+       select  id,full_name,short_name,brand,address,latitude,longitude,company_desc,min_staff,max_staff,flag,create_time
+        from company_info
+        where flag=1
+    </select>
+
+    <select id="findIdByFullName" parameterType="java.lang.String" resultType="java.lang.Long">
+        select id from company_info where full_name=#{fullName}
+    </select>
+
+
+
+
+</mapper>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nsd.recruitment.dao.ManagerDao">
+    <resultMap id="BaseResultMap" type="com.nsd.recruitment.domain.ManagerInfo">
+        <result column="id" property="id" />
+        <result column="sex" property="sex" />
+        <result column="flag" property="flag" />
+        <result column="phone" property="phone" />
+        <result column="manager_name" property="name" />
+        <result column="email" property="email" />
+        <result column="create_time" property="createTime" />
+        <result column="last_update_time" property="lastUpdateTime" />
+        <result column="remark" property="remark" />
+    </resultMap>
+
+    <resultMap id="JobCategoryResultMap" type="com.nsd.recruitment.vo.JobCategoryRespVo">
+        <result column="id" property="id" />
+        <result column="parent_id" property="parentId" />
+        <result column="create_time" property="createTime" />
+        <result column="parent" property="parent" />
+        <result column="category_name" property="categoryName" />
+    </resultMap>
+    <resultMap id="RecruitRegionResultMap" type="com.nsd.recruitment.domain.RecruitRegion">
+        <result column="id" property="id" />
+        <result column="region_name" property="regionName" />
+        <result column="remark" property="remark" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+
+    </resultMap>
+
+
+    <select id="getOneById" resultMap="BaseResultMap" parameterType="java.lang.Long">
+        select id ,manager_name,phone,email,create_time,last_update_time,flag,sex
+        from manager_info
+        where id = #{id}
+    </select>
+
+
+
+
+    <insert id="saveManagerInfo" parameterType="com.nsd.recruitment.domain.ManagerInfo" useGeneratedKeys="true" keyProperty="id">
+        insert into manager_info
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="name != null and name !=''">
+                manager_name,
+            </if>
+            <if test="phone != null and phone !=''">
+                phone,
+            </if>
+            <if test="email != null and email !=''">
+                email,
+            </if>
+            <if test="flag != null">
+                flag,
+            </if>
+            <if test="sex != null">
+                sex,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+            <if test="lastUpdateTime != null">
+                last_update_time,
+            </if>
+             <if test="remark != null">
+                 remark,
+            </if>
+            <if test="companyId != null">
+                 company_id,
+            </if>
+            <if test="userId != null">
+                 user_id,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="name != null and name !=''">
+                #{name},
+            </if>
+            <if test="phone != null and phone !=''">
+                #{phone},
+            </if>
+            <if test="email != null and email !=''">
+                #{email},
+            </if>
+            <if test="flag != null">
+                #{flag},
+            </if>
+            <if test="sex != null">
+                #{sex},
+            </if>
+            <if test="createTime != null">
+                #{createTime},
+            </if>
+            <if test="lastUpdateTime != null">
+                #{lastUpdateTime},
+            </if>
+            <if test="remark != null">
+                #{remark},
+            </if>
+            <if test="companyId != null">
+                #{companyId},
+            </if>
+            <if test="userId != null">
+                #{userId},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateManageInfo"  parameterType="com.nsd.recruitment.domain.ManagerInfo">
+        update manager_info
+        <set>
+            <if test="name != null and name !=''">
+              manager_name=  #{name},
+            </if>
+            <if test="phone != null and phone !=''">
+             phone=  #{phone},
+            </if>
+            <if test="email != null and email !=''">
+             email=   #{email},
+            </if>
+            <if test="flag != null">
+             flag=   #{flag},
+            </if>
+            <if test="sex != null">
+              sex=  #{sex},
+            </if>
+            <if test="createTime != null">
+             create_time=   #{createTime},
+            </if>
+            <if test="lastUpdateTime != null">
+             last_update_time=   #{lastUpdateTime},
+            </if>
+            <if test="remark != null">
+              remark=  #{remark},
+            </if>
+            <if test="companyId != null">
+             company_id=   #{companyId},
+            </if>
+            <if test="userId != null">
+             user_id=   #{userId},
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+
+    <select id="findManagerStatus" resultType="java.lang.Integer">
+        select flag from manager_info where user_id=#{userId} and company_id=#{companyId}
+    </select>
+    <select id="findPage" resultMap="JobCategoryResultMap">
+        select a.id,a.category_name,a.parent_id,a.create_time ,IFNULL(b.category_name,'无') parent
+        from job_category a
+        left join (select category_name,id from job_category)b
+        on  a.parent_id=b.id
+        where a.del_flag=0
+    </select>
+
+    <select id="findRegionPage" resultMap="RecruitRegionResultMap" parameterType="java.lang.Boolean">
+        select id,region_name,remark,create_time,update_time
+        from recruit_region
+        where del_flag=0
+    </select>
+    <select id="countManagerNumber" parameterType="java.lang.Long" resultType="java.lang.Integer">
+        select count(*) from  manager_info where company_id=#{companyId}
+    </select>
+    <select id="listManagerByCompany" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        select m.id ,m.manager_name,m.remark,u.phone from  manager_info m
+        left join user_info u on m.user_id=u.id
+        where m.company_id=#{companyId}
+        and m.flag=1
+
+
+    </select>
+
+    <update id="approvesManager" parameterType="com.nsd.recruitment.domain.ManagerInfo">
+        update manager_info set flag =#{flag} where id=#{id}
+
+
+    </update>
+
+    <select id="findRecentManagerByCompany" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        select id,manager_name from manager_info
+        where company_id=#{companyId}
+        and flag=2
+        order  by create_time desc limit 1
+    </select>
+
+
+</mapper>

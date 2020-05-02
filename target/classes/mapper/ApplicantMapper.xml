@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nsd.recruitment.dao.ApplicantDao">
+    <resultMap id="BaseResultMap" type="com.nsd.recruitment.domain.Applicant">
+        <result column="id" property="id" />
+        <result column="user_id" property="userId" />
+        <result column="applicant_name" property="applicantName" />
+        <result column="expect_position" property="expectPosition" />
+        <result column="create_time" property="createTime" />
+        <result column="openid" property="openid" />
+        <result column="telephone" property="telephone" />
+        <result column="age" property="age" />
+        <result column="work_years" property="workYears" />
+        <result column="email" property="email" />
+        <result column="introduce" property="introduce" />
+        <result column="update_time" property="updateTime" />
+        <result column="flag" property="flag" />
+        <result column="education_level" property="educationLevel" />
+        <result column="certificate_list" property="certificateList" />
+        <result column="head_url" property="headUrl" />
+        <result column="max_expect_salary" property="maxExpectSalary" />
+        <result column="min_expect_salary" property="minExpectSalary" />
+        <collection property="workExperienceList" resultMap="WorkExperienceResultMap"></collection>
+        <collection property="educationExperienceList" resultMap="EducationExperienceResultMap"></collection>
+    </resultMap>
+
+     <resultMap id="DeliveryResultMap" type="com.nsd.recruitment.dto.model.DeliveryInfo">
+        <result column="id" property="id" />
+        <result column="applicant_name" property="applicantName" />
+        <result column="create_time" property="deliveryTime" />
+        <result column="openid" property="openid" />
+        <result column="telephone" property="telephone" />
+        <result column="age" property="age" />
+        <result column="work_years" property="workYears" />
+        <result column="email" property="email" />
+        <result column="introduce" property="introduce" />
+        <result column="applicant_id" property="applicantId" />
+        <result column="company_id" property="companyId" />
+        <result column="job_id" property="jobId" />
+        <result column="education_level" property="educationLevel" />
+        <result column="certificate_list" property="certificateList" />
+        <result column="expect_position" property="expectPosition" />
+        <result column="head_url" property="headUrl" />
+    </resultMap>
+
+    <resultMap id="ApplicantBasicResultMap" type="com.nsd.recruitment.vo.ApplicantRespVo">
+        <result column="user_id" jdbcType="BIGINT" property="userId" />
+        <result column="applicant_id" jdbcType="BIGINT" property="applicantId" />
+    </resultMap>
+
+    <resultMap id="WorkExperienceResultMap" type="com.nsd.recruitment.domain.WorkExperience">
+        <result column="work_id" property="id" />
+        <result column="company_name" property="companyName" />
+        <result column="begin_time" property="beginTime" />
+        <result column="end_time" property="endTime" />
+        <result column="job_name" property="jobName" />
+        <result column="responsibility" property="responsibility" />
+    </resultMap>
+
+
+    <resultMap id="EducationExperienceResultMap" type="com.nsd.recruitment.domain.EducationExperience">
+        <result column="education_id" property="id" />
+        <result column="school_name" property="schoolName" />
+        <result column="major_name" property="majorName" />
+        <result column="qualification" property="qualification" />
+        <result column="education_begin" property="beginTime" />
+        <result column="education_end" property="endTime" />
+        <result column="education_desc" property="educationDesc" />
+    </resultMap>
+    <resultMap id="EducationEsResultMap" type="com.nsd.recruitment.vo.EducationEsVo">
+        <result column="id" property="id" />
+        <result column="applicant_id" property="applicantId" />
+        <result column="school_name" property="schoolName" />
+        <result column="major_name" property="majorName" />
+        <result column="qualification" property="qualification" />
+    </resultMap>
+     <resultMap id="WorkEsResultMap" type="com.nsd.recruitment.vo.WorkEsVo">
+         <result column="id" property="id" />
+         <result column="applicant_id" property="applicantId" />
+         <result column="company_name" property="companyName" />
+         <result column="job_name" property="jobName" />
+    </resultMap>
+
+
+    <sql id="Base_Column_List">
+		id, applicant_name,create_time,openid,telephone,age,work_years,email,introduce,update_time,flag
+	</sql>
+
+    <select id="getOneById" resultMap="BaseResultMap" parameterType="java.lang.Long">
+        select
+        <include refid="Base_Column_List" />
+        from applicant
+        where id = #{id}
+    </select>
+    <select id="findByPage" resultMap="BaseResultMap">
+        select <include refid="Base_Column_List"/> from applicant
+    </select>
+    <select id="getIdByPhone" parameterType="java.lang.String" resultType="java.lang.Long">
+        SELECT id FROM nsd.applicant where telephone=#{phone}
+
+
+    </select>
+    <select id="showAllDeliveryInfo" parameterType="java.lang.Long" resultMap="DeliveryResultMap">
+        select p.id id,p.job_id,p.company_id ,p.create_time,a.id applicant_id, a.applicant_name,
+        a.telephone,a.age,a.work_years,a.email,a.introduce,a.education_level,a.certificate_list,a.head_url
+        from position_applicant p
+        left join applicant a on p.applicant_id=a.id
+        <if test="company !=null">
+            where p.company_id=#{company}
+        </if>
+
+    </select>
+
+    <select id="basicApplicantInfo" parameterType="java.lang.String" resultMap="ApplicantBasicResultMap">
+       select a.id applicant_id,u.id user_id  from  applicant a , user_info u where  a.user_id=u.id
+        and  u.openid=#{openid}
+    </select>
+    <select id="applicantDetailByOpenid" parameterType="java.lang.String" resultMap="BaseResultMap">
+       select a.id, a.applicant_name,a.create_time,a.telephone,a.age,a.work_years,a.email,a.introduce,a.update_time,
+       a.flag,u.id user_id,a.expect_position
+       from applicant a ,user_info u
+       where a.user_id=u.id
+       and u.openid=#{openid}
+    </select>
+
+     <select id="findDetailById" parameterType="java.lang.Long" resultMap="BaseResultMap">
+          select a.id, a.applicant_name,a.create_time,a.telephone,a.age,a.work_years,a.email,a.introduce,a.update_time,a.certificate_list,
+            a.flag,a.expect_position,w.company_name,w.job_name,w.responsibility,w.begin_time,w.end_time,w.id work_id,e.id education_id,
+            e.school_name,e.major_name,e.qualification,e.education_desc,e.begin_time education_begin,e.end_time education_end,a.head_url,
+            a.max_expect_salary,a.min_expect_salary
+            from applicant a
+            left join work_experience w on w.applicant_id=a.id
+            left join education_experience e on e.applicant_id=a.id
+            where a.id=#{id}
+        </select>
+
+    <select id="deliveryApplicantPosition"  parameterType="java.lang.Long" resultMap="BaseResultMap">
+             select a.id, a.applicant_name,a.create_time,a.telephone,a.age,a.work_years,a.email,a.introduce,a.update_time,a.certificate_list,
+            a.flag,a.expect_position,w.company_name,w.job_name,w.responsibility,w.begin_time,w.end_time,w.id work_id,e.id education_id,
+            e.school_name,e.major_name,e.qualification,e.education_desc,e.begin_time education_begin,e.end_time education_end,a.head_url
+            from applicant a
+            left join work_experience w on w.applicant_id=a.id
+            left join education_experience e on e.applicant_id=a.id
+            where a.id=#{applicantId}
+
+    </select>
+
+    <select id="findEducationLevel" parameterType="java.lang.Long" resultType="java.lang.String">
+        select s.label from(select label,dict_value from  sys_dict where dict_type='education' ) s ,
+        (select min(qualification) education_value from education_experience where applicant_id=#{applicantId}) b
+        where s.dict_value=education_value
+    </select>
+
+    <select id="findApplicantIdByOpenid" parameterType="java.lang.String" resultType="java.lang.Long">
+        SELECT a.id applicant_id,u.id user_id FROM applicant a,user_info u where a.user_id=u.id and u.openid=#{openid}
+    </select>
+
+
+    <select id="listEducationExperience" parameterType="java.lang.Long" resultMap="EducationEsResultMap">
+        select id,applicant_id,school_name,major_name,qualification
+        from  education_experience
+        where applicant_id=#{applicantId}
+    </select>
+
+    <select id="listWorkExperience" parameterType="java.lang.Long" resultMap="WorkEsResultMap">
+        select id,applicant_id,company_name,job_name
+        from work_experience
+        where applicant_id=#{applicantId}
+    </select>
+
+
+
+</mapper>

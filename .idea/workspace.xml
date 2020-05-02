@@ -1,0 +1,954 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3d21fc6e-7b96-408e-9cea-019504b78620" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1050">
+              <caret line="122" selection-start-line="122" selection-end-line="122" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/nsd/recruitment/controller/UploadFileController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/nsd/recruitment/controller/WeiLoginController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3375">
+              <caret line="46" column="70" selection-start-line="46" selection-start-column="70" selection-end-line="46" selection-end-column="70" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/nsd/recruitment/utils/AccessAddressUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-271">
+              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/nsd/recruitment/utils/CollectionUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="179">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/nsd/recruitment/utils/CosUploadUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-5625">
+              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/nsd/recruitment/service/CompanyInfoService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="675">
+              <caret line="37" selection-start-line="37" selection-end-line="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/CompanyInfoMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2425">
+              <caret line="97" column="65" selection-start-line="97" selection-start-column="65" selection-end-line="97" selection-end-column="65" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/nsd/recruitment/dao/CompanyInfoDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="30" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/nsd/recruitment/domain/CompanyInfo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="305">
+              <caret line="32" column="28" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="AnnotationType" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>open_id</find>
+      <find>openId</find>
+      <find>pageinfo</find>
+      <find>BaseResultMap</find>
+      <find>UserDetailsServiceImpl</find>
+      <find>userDetailsService</find>
+      <find>com.diane.manage.model</find>
+      <find>PasswordResultMap</find>
+      <find>LoginResultMap</find>
+      <find>PasswordUtils</find>
+      <find>type</find>
+      <find>enum</find>
+      <find>listChatMessageByApplicantId</find>
+      <find>findApplicantIdByOpenid</find>
+      <find>companyId</find>
+      <find>basicApplicantInfo</find>
+      <find>ApplicantBasicResultMap</find>
+      <find>job</find>
+      <find>group</find>
+      <find>dict_value</find>
+      <find>mongoTemplate</find>
+      <find>ChatMessageService</find>
+      <find>remaind</find>
+      <find>WorkExperienceResultMap</find>
+      <find>CompanyPostJobResultMap</find>
+      <find>ws</find>
+      <find>chatMessageService</find>
+      <find>log</find>
+      <find>bin</find>
+      <find>findUserByopenid</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>openid</replace>
+      <replace>com.nsd.recruitment.domain</replace>
+      <replace>dict_type</replace>
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/nsd/recruitment/domain/ManagerInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nsd/recruitment/service/ManagerService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nsd/recruitment/service/impl/ManagerServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nsd/recruitment/domain/UserInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nsd/recruitment/dao/UserInfoDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nsd/recruitment/service/UserInfoService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nsd/recruitment/service/impl/UserInfoServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nsd/recruitment/dao/ManagerDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nsd/recruitment/service/ChatMessageService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nsd/recruitment/dto/model/DeliveryInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nsd/recruitment/config/RabbitConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/ManagerMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nsd/recruitment/domain/CompanyInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nsd/recruitment/vo/WorkEsVo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nsd/recruitment/dao/ApplicantDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nsd/recruitment/service/impl/EducationExperienceServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nsd/recruitment/service/impl/WorkExperienceServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nsd/recruitment/domain/EducationExperience.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nsd/recruitment/vo/EducationEsVo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nsd/recruitment/vo/CompanyAndManagerVo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nsd/recruitment/domain/Applicant.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nsd/recruitment/domain/JobInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nsd/recruitment/controller/JobController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nsd/recruitment/vo/PostJobVo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nsd/recruitment/dto/model/PostDetail.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nsd/recruitment/vo/SenderAndReceiverVo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nsd/recruitment/Application.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nsd/recruitment/domain/ChatMessage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nsd/recruitment/service/impl/ChatMessageServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nsd/recruitment/service/impl/ApplicantServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/ApplicantMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nsd/recruitment/vo/JobQueryVo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nsd/recruitment/service/JobInfoService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nsd/recruitment/dao/JobInfoDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nsd/recruitment/service/impl/JobInfoServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/JobInfoMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nsd/recruitment/vo/CompanyBasicRespVo.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/UserInfoMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nsd/recruitment/service/JobCategoryService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nsd/recruitment/service/impl/JobCategoryServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nsd/recruitment/controller/ApplicantController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nsd/recruitment/vo/SearchApplicantVo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nsd/recruitment/remote/ProducerRemote.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nsd/recruitment/dao/CompanyInfoDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nsd/recruitment/service/CompanyInfoService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/CompanyInfoMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nsd/recruitment/service/impl/CompanyInfoServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nsd/recruitment/controller/CompanyController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nsd/recruitment/controller/WeiLoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nsd/recruitment/utils/CosUploadUtil.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="shicai" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="shicai" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="240" />
+    <option name="y" value="127" />
+    <option name="width" value="1440" />
+    <option name="height" value="765" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="shicai" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shicai" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shicai" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shicai" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shicai" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shicai" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shicai" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shicai" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shicai" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shicai" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="recruitment" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shicai" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shicai" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="recruitment" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shicai" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shicai" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="recruitment" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shicai" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shicai" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/nsd/recruitment/handler" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.nsd.recruitment.utils" />
+      <recent name="com.nsd.recruitment.remote" />
+      <recent name="com.nsd.recruitment.config" />
+      <recent name="com.nsd.recruitment.handler" />
+      <recent name="com.nsd.recruitment.vo" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\nsd\shicai\src\main\java\com\nsd\recruitment\handler" />
+      <recent name="E:\nsd\shicai\src\main\java\com\nsd\recruitment\handle" />
+      <recent name="E:\nsd\shicai\src\main\java\com\nsd\recruitment\utils" />
+      <recent name="E:\nsd\shicai\src\main\java\com\nsd\recruitment\controller" />
+      <recent name="E:\nsd\shicai\src\main\java\com\nsd\recruitment\common" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.cai">
+    <configuration name="cai" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.nsd.recruitment.Application" />
+      <module name="shicai" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="shicai" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.nsd.recruitment.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.cai" />
+      <item itemvalue="Spring Boot.Application" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3d21fc6e-7b96-408e-9cea-019504b78620" name="Default Changelist" comment="" />
+      <created>1584426080781</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584426080781</updated>
+      <workItem from="1584426083568" duration="3137000" />
+      <workItem from="1584452417214" duration="717000" />
+      <workItem from="1584500474581" duration="3944000" />
+      <workItem from="1584536632141" duration="3852000" />
+      <workItem from="1584584112573" duration="4721000" />
+      <workItem from="1584670932856" duration="699000" />
+      <workItem from="1584780221562" duration="1996000" />
+      <workItem from="1584787331976" duration="981000" />
+      <workItem from="1584848785832" duration="209000" />
+      <workItem from="1584871273597" duration="2290000" />
+      <workItem from="1584929691004" duration="2708000" />
+      <workItem from="1584961810507" duration="2960000" />
+      <workItem from="1585016097729" duration="2854000" />
+      <workItem from="1585024411315" duration="12028000" />
+      <workItem from="1585049141114" duration="9836000" />
+      <workItem from="1585102755026" duration="14622000" />
+      <workItem from="1585141194421" duration="2435000" />
+      <workItem from="1585189025452" duration="16122000" />
+      <workItem from="1585222208392" duration="6480000" />
+      <workItem from="1585275182707" duration="14280000" />
+      <workItem from="1585379570456" duration="17847000" />
+      <workItem from="1585463615366" duration="13389000" />
+      <workItem from="1585535954081" duration="8061000" />
+      <workItem from="1585571208262" duration="599000" />
+      <workItem from="1585620705429" duration="15221000" />
+      <workItem from="1585658759757" duration="3831000" />
+      <workItem from="1585707750543" duration="14418000" />
+      <workItem from="1585793859167" duration="17624000" />
+      <workItem from="1585879969767" duration="20500000" />
+      <workItem from="1585915382816" duration="757000" />
+      <workItem from="1585983909985" duration="13758000" />
+      <workItem from="1586068306306" duration="20390000" />
+      <workItem from="1586155389818" duration="17469000" />
+      <workItem from="1586223261863" duration="25594000" />
+      <workItem from="1586261444282" duration="5214000" />
+      <workItem from="1586309612880" duration="19425000" />
+      <workItem from="1586395268040" duration="17142000" />
+      <workItem from="1586482749301" duration="17340000" />
+      <workItem from="1586592504511" duration="7216000" />
+      <workItem from="1586684531135" duration="9000" />
+      <workItem from="1586688969005" duration="3145000" />
+      <workItem from="1586742319897" duration="7132000" />
+      <workItem from="1586774834935" duration="7119000" />
+      <workItem from="1586828127900" duration="8429000" />
+      <workItem from="1586871691454" duration="1265000" />
+      <workItem from="1586913761051" duration="16699000" />
+      <workItem from="1586955355027" duration="4186000" />
+      <workItem from="1587000689828" duration="14762000" />
+      <workItem from="1587086695096" duration="14959000" />
+      <workItem from="1587189867067" duration="20576000" />
+      <workItem from="1587294761380" duration="10178000" />
+      <workItem from="1587346109953" duration="18629000" />
+      <workItem from="1587384133376" duration="3560000" />
+      <workItem from="1587432934103" duration="23425000" />
+      <workItem from="1587471604974" duration="5588000" />
+      <workItem from="1587519587804" duration="19699000" />
+      <workItem from="1587559891136" duration="1948000" />
+      <workItem from="1587606000891" duration="13363000" />
+      <workItem from="1587650599909" duration="1199000" />
+      <workItem from="1587690094137" duration="16335000" />
+      <workItem from="1587738717953" duration="3120000" />
+      <workItem from="1587781139837" duration="20218000" />
+      <workItem from="1587864177678" duration="15423000" />
+      <workItem from="1587903166735" duration="6128000" />
+      <workItem from="1587950398931" duration="9624000" />
+      <workItem from="1587991381706" duration="1697000" />
+      <workItem from="1588036442320" duration="8122000" />
+      <workItem from="1588080289328" duration="2658000" />
+      <workItem from="1588123781395" duration="14912000" />
+      <workItem from="1588164560281" duration="1192000" />
+      <workItem from="1588210095709" duration="14583000" />
+      <workItem from="1588423306869" duration="580000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="673128000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4973545" visible="true" weight="0.28051737" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" sideWeight="0.5026455" side_tool="true" weight="0.20129345" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.7464539" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.7553192" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.1391162" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Spring" order="6" />
+      <window_info anchor="bottom" id="TODO" order="7" weight="0.59574467" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.11170213" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="bottom" id="Version Control" order="13" />
+      <window_info anchor="bottom" id="Java Enterprise" order="14" weight="0.4219858" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.25303152" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4973545" visible="true" weight="0.24387754" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" sideWeight="0.5026455" side_tool="true" weight="0.20129345" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.7464539" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.4893617" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.10310966" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Spring" order="6" />
+      <window_info anchor="bottom" id="TODO" order="7" weight="0.59574467" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.11292962" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="bottom" id="Version Control" order="13" />
+      <window_info anchor="bottom" id="Java Enterprise" order="14" weight="0.4219858" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.3589329" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="decodePhoneInfo.encryptedData" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nsd/recruitment/vo/SenderAndReceiverVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nsd/recruitment/controller/WorkExperienceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-75">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nsd/recruitment/service/impl/WorkExperienceServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="874">
+          <caret line="60" column="17" selection-start-line="60" selection-start-column="17" selection-end-line="60" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nsd/recruitment/handler/MyWebSocketHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1400">
+          <caret line="66" column="18" selection-start-line="66" selection-start-column="18" selection-end-line="66" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ApplicantMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="20" column="68" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nsd/recruitment/domain/ChatMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-375">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nsd/recruitment/service/impl/ApplicantServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1400">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nsd/recruitment/domain/JobInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="24" column="31" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nsd/recruitment/vo/PostJobVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nsd/recruitment/domain/Applicant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="37" column="35" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nsd/recruitment/controller/EducationExperienceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="37" column="6" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nsd/recruitment/domain/WorkExperience.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-45">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nsd/recruitment/dto/model/PostDetail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="650">
+          <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nsd/recruitment/domain/EducationExperience.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="16" column="32" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nsd/recruitment/dao/JobInfoDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nsd/recruitment/service/JobInfoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nsd/recruitment/vo/JobQueryVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="29" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/JobInfoMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="181" column="28" selection-start-line="181" selection-start-column="28" selection-end-line="181" selection-end-column="28" />
+          <folding>
+            <element signature="e#9524#9528#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nsd/recruitment/controller/JobController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-742">
+          <caret line="29" column="63" selection-start-line="29" selection-start-column="63" selection-end-line="29" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nsd/recruitment/service/impl/JobInfoServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2328">
+          <caret line="129" column="57" selection-start-line="129" selection-start-column="57" selection-end-line="129" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nsd/recruitment/domain/UserInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-150">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nsd/recruitment/vo/CompanyBasicRespVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nsd/recruitment/service/impl/ManagerServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ManagerMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/UserInfoMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3125">
+          <caret line="125" column="71" selection-start-line="125" selection-start-column="71" selection-end-line="125" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nsd/recruitment/dao/UserInfoDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="18" column="29" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nsd/recruitment/config/WebSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nsd/recruitment/controller/ManageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nsd/recruitment/service/JobCategoryService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nsd/recruitment/dao/RecruitRegionDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nsd/recruitment/service/impl/UserInfoServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+          <folding>
+            <element signature="e#1643#1644#0" expanded="true" />
+            <element signature="e#1699#1700#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nsd/recruitment/domain/ManagerInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nsd/recruitment/service/impl/EducationExperienceServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-275">
+          <caret line="35" column="81" selection-start-line="35" selection-start-column="58" selection-end-line="35" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nsd/recruitment/controller/ApplicantController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5025">
+          <caret line="214" column="65" selection-start-line="214" selection-start-column="65" selection-end-line="214" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nsd/recruitment/service/impl/JobCategoryServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="94" column="43" selection-start-line="94" selection-start-column="43" selection-end-line="94" selection-end-column="43" />
+          <folding>
+            <element signature="e#3346#3347#0" expanded="true" />
+            <element signature="e#3397#3398#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nsd/recruitment/vo/SearchApplicantVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nsd/recruitment/controller/CompanyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="45" column="45" selection-start-line="45" selection-start-column="45" selection-end-line="45" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nsd/recruitment/common/HttpResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="e#346#347#0" expanded="true" />
+            <element signature="e#407#408#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nsd/recruitment/common/HttpStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3325">
+          <caret line="133" column="28" selection-start-line="133" selection-start-column="28" selection-end-line="133" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nsd/recruitment/remote/ProducerRemote.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nsd/recruitment/service/impl/CompanyInfoServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1100">
+          <caret line="79" column="21" selection-start-line="79" selection-start-column="21" selection-end-line="79" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nsd/recruitment/service/CompanyInfoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/CompanyInfoMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2425">
+          <caret line="97" column="65" selection-start-line="97" selection-start-column="65" selection-end-line="97" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nsd/recruitment/dao/CompanyInfoDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="30" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nsd/recruitment/domain/CompanyInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="32" column="28" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1050">
+          <caret line="122" selection-start-line="122" selection-end-line="122" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nsd/recruitment/controller/UploadFileController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nsd/recruitment/controller/WeiLoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3375">
+          <caret line="46" column="70" selection-start-line="46" selection-start-column="70" selection-end-line="46" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nsd/recruitment/utils/AccessAddressUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-271">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nsd/recruitment/utils/CollectionUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nsd/recruitment/utils/CosUploadUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5625">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

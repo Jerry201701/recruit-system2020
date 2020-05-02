@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nsd.recruitment.dao.CustomersDao">
+	<resultMap id="BaseResultMap" type="com.nsd.recruitment.domain.Customers">
+		<result column="id" property="id" />
+		<result column="name" property="name" />
+		<result column="email" property="email" />
+		<result column="school" property="school" />
+		<result column="education" property="education" />
+		<result column="profile" property="profile" />
+		<result column="profession" property="profession" />
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		id, name,phone,email,education,school,profession,profile
+	</sql>
+
+	<select id="getOneById" resultMap="BaseResultMap" parameterType="java.lang.Long">
+		select
+		<include refid="Base_Column_List" />
+		from customers
+		where id = #{id}
+	</select>
+	<select id="findByPage" resultMap="BaseResultMap">
+		select <include refid="Base_Column_List"/> from customers
+	</select>
+
+	
+</mapper>
